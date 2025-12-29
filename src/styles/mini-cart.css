@@ -1,0 +1,10 @@
+.cart-mini::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    position: absolute;
+    top: -30px;
+    right: 0
+}
