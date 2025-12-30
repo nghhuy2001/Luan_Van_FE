@@ -1,14 +1,26 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import ProductPage from "./pages/ProductPage";
 import  "./index.css"
+import ProductDetail from "./pages/ProductDetail";
+import CustomerLayout from "./layouts/CustomerLayout";
+import AdminLayout from "./layouts/AdminLayout";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<ProductPage />} />
+          {/*  CUSTOMER  */}
+           <Route element={<CustomerLayout/>}>
+               <Route path="/" element={<Home />} />
+               <Route path="/products/:id" element={<ProductDetail />} />
+           </Route>
+
+        {/*    ADMIN  */}
+            <Route path="/admin" element={<AdminLayout />}>
+                {/*<Route index element={<Dashboard />} />*/}
+                {/*<Route path="products" element={<ProductManage />} />*/}
+            </Route>
         </Routes>
       </BrowserRouter>
   );

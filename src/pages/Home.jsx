@@ -8,7 +8,6 @@ import BackToTop from "../components/BackToTop";
 const Home = () => {
     return (
         <>
-            <Header />
             <Banner />
             <div className="content-body max-w-7xl mx-auto px-4">
                 <CategoryQuickSelect />
