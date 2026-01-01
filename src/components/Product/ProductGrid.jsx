@@ -9,6 +9,7 @@ export default function ProductGrid({ products }) {
       md:grid-cols-4
       xl:grid-cols-5
       gap-6
+      mt-6
     ">
             {products.map(product => (
                 <ProductCard key={product.id} product={product} />

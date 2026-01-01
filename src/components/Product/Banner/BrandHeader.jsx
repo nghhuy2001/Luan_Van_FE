@@ -2,7 +2,7 @@ export default function BrandHeader({ brand, tabs }) {
     return (
         <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-6">
-                <div className="bg-blue-800 text-white px-5 py-2 font-semibold">
+                <div className="bg-blue-800 text-white px-5 py-2 font-semibold uppercase">
                     {brand}
                 </div>
 
@@ -18,7 +18,7 @@ export default function BrandHeader({ brand, tabs }) {
                 </div>
             </div>
 
-            <a href="/" className="text-blue-600 text-sm hover:underline">
+            <a href={`/brand/${brand}`} className="text-blue-600 text-sm hover:underline">
                 Xem tất cả
                 <i className="fa-solid fa-caret-down"></i>
             </a>

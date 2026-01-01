@@ -1,10 +1,10 @@
-import {useParams} from "react-router-dom";
-import {useState} from "react";
-import {products} from "../apis/productID";
-import BackToTop from "../components/BackToTop";
+import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { products } from "../apis/productID";
+import BackToTop from "../components/Scroll/BackToTop";
 
 export default function ProductDetail() {
-    const {id} = useParams();
+    const { id } = useParams();
     const product = products.find(p => p.id === Number(id));
     const [activeImage, setActiveImage] = useState(product.images[0]);
 
@@ -63,13 +63,13 @@ export default function ProductDetail() {
                             <span
                                 className="text-gray-400 line-through text-lg">{product.price.toLocaleString()}đ</span>
                             <span className="text-red-600 text-3xl font-bold">
-                {product.price.toLocaleString()}đ
-            </span>
+                                {product.price.toLocaleString()}đ
+                            </span>
                             <span className="bg-red-100 text-red-600 text-sm font-semibold px-2 py-1 rounded">
-                -{Math.round(
-                                ((product.price - product.price) / product.price) * 100
-                            )}%
-            </span>
+                                -{Math.round(
+                                    ((product.price - product.price) / product.price) * 100
+                                )}%
+                            </span>
                         </div>
                     </div>
 
@@ -100,7 +100,7 @@ export default function ProductDetail() {
                             Chat tư vấn
                         </button>
                         <button
-                            className="flex-1 bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">
+                            className="flex-1 bg-blue-500 text-white py-2 rounded-lg hover:bg-green-600 transition">
                             Thêm vào giỏ
                         </button>
                     </div>
@@ -162,29 +162,29 @@ export default function ProductDetail() {
                         <h3 className="font-semibold mb-3 pb-2 border-b-2">Chính sách bán hàng</h3>
                         <div className="text-sm pb-2 flex items-center">
                             <img className="w-1/6 me-1.5"
-                                 src={`${process.env.PUBLIC_URL}/baohanh/policy1.png`}
-                                 alt="product"
+                                src={`${process.env.PUBLIC_URL}/baohanh/policy1.png`}
+                                alt="product"
                             />
                             <p>Miễn phí giao hàng cho hóa đơn từ 3 triệu (Bán kính ≤ 10km)</p>
                         </div>
                         <div className="text-sm pb-2 flex items-center">
                             <img className="w-1/6 me-1.5"
-                                 src={`${process.env.PUBLIC_URL}/baohanh/policy2.png`}
-                                 alt="product"
+                                src={`${process.env.PUBLIC_URL}/baohanh/policy2.png`}
+                                alt="product"
                             />
                             <p>Giao hàng nhanh tại Hồ Chí Minh</p>
                         </div>
                         <div className="text-sm pb-2 flex items-center">
                             <img className="w-1/6 me-1.5"
-                                 src={`${process.env.PUBLIC_URL}/baohanh/policy3.png`}
-                                 alt="product"
+                                src={`${process.env.PUBLIC_URL}/baohanh/policy3.png`}
+                                alt="product"
                             />
                             <p>Trả góp 0% bằng thẻ tín dụng Visa, Master, JCB</p>
                         </div>
                         <div className="text-sm pb-2 flex items-center">
                             <img className="w-1/6 me-1.5"
-                                 src={`${process.env.PUBLIC_URL}/baohanh/policy4.png`}
-                                 alt="product"
+                                src={`${process.env.PUBLIC_URL}/baohanh/policy4.png`}
+                                alt="product"
                             />
                             <p>Miễn phí thanh toán quẹt thẻ</p>
                         </div>
@@ -253,95 +253,95 @@ export default function ProductDetail() {
 
                         <table className="w-full text-sm border border-gray-200 rounded overflow-hidden">
                             <tbody>
-                            <tr className="border-t">
-                                <td className="w-1/3 bg-gray-50 px-3 py-2 font-medium">
-                                    CPU
-                                </td>
-                                <td className="px-3 py-2">
-                                    Intel® Core™ i3-1315U 1.2GHz up to 4.5GHz 10MB
-                                </td>
-                            </tr>
+                                <tr className="border-t">
+                                    <td className="w-1/3 bg-gray-50 px-3 py-2 font-medium">
+                                        CPU
+                                    </td>
+                                    <td className="px-3 py-2">
+                                        Intel® Core™ i3-1315U 1.2GHz up to 4.5GHz 10MB
+                                    </td>
+                                </tr>
 
-                            <tr className="border-t">
-                                <td className="bg-gray-50 px-3 py-2 font-medium">
-                                    RAM
-                                </td>
-                                <td className="px-3 py-2">
-                                    8GB DDR5 (2x SO-DIMM, up to 64GB)
-                                </td>
-                            </tr>
+                                <tr className="border-t">
+                                    <td className="bg-gray-50 px-3 py-2 font-medium">
+                                        RAM
+                                    </td>
+                                    <td className="px-3 py-2">
+                                        8GB DDR5 (2x SO-DIMM, up to 64GB)
+                                    </td>
+                                </tr>
 
-                            <tr className="border-t">
-                                <td className="bg-gray-50 px-3 py-2 font-medium">
-                                    Ổ cứng
-                                </td>
-                                <td className="px-3 py-2">
-                                    256GB M.2 2280 NVMe™ PCIe® 4.0 SSD
-                                </td>
-                            </tr>
+                                <tr className="border-t">
+                                    <td className="bg-gray-50 px-3 py-2 font-medium">
+                                        Ổ cứng
+                                    </td>
+                                    <td className="px-3 py-2">
+                                        256GB M.2 2280 NVMe™ PCIe® 4.0 SSD
+                                    </td>
+                                </tr>
 
-                            <tr className="border-t">
-                                <td className="bg-gray-50 px-3 py-2 font-medium">
-                                    Card đồ họa
-                                </td>
-                                <td className="px-3 py-2">
-                                    Intel UHD Graphics
-                                </td>
-                            </tr>
+                                <tr className="border-t">
+                                    <td className="bg-gray-50 px-3 py-2 font-medium">
+                                        Card đồ họa
+                                    </td>
+                                    <td className="px-3 py-2">
+                                        Intel UHD Graphics
+                                    </td>
+                                </tr>
 
-                            <tr className="border-t">
-                                <td className="bg-gray-50 px-3 py-2 font-medium">
-                                    Màn hình
-                                </td>
-                                <td className="px-3 py-2">
-                                    15.6" FHD (1920×1080), 16:9, chống chói
-                                </td>
-                            </tr>
+                                <tr className="border-t">
+                                    <td className="bg-gray-50 px-3 py-2 font-medium">
+                                        Màn hình
+                                    </td>
+                                    <td className="px-3 py-2">
+                                        15.6" FHD (1920×1080), 16:9, chống chói
+                                    </td>
+                                </tr>
 
-                            <tr className="border-t">
-                                <td className="bg-gray-50 px-3 py-2 font-medium">
-                                    Cổng giao tiếp
-                                </td>
-                                <td className="px-3 py-2">
-                                    2x USB 3.2 Gen 1 Type-A <br />
-                                    2x USB 3.2 Gen 2 Type-C <br />
-                                    1x HDMI 1.4 <br />
-                                    1x RJ45 Gigabit Ethernet
-                                </td>
-                            </tr>
+                                <tr className="border-t">
+                                    <td className="bg-gray-50 px-3 py-2 font-medium">
+                                        Cổng giao tiếp
+                                    </td>
+                                    <td className="px-3 py-2">
+                                        2x USB 3.2 Gen 1 Type-A <br />
+                                        2x USB 3.2 Gen 2 Type-C <br />
+                                        1x HDMI 1.4 <br />
+                                        1x RJ45 Gigabit Ethernet
+                                    </td>
+                                </tr>
 
-                            <tr className="border-t">
-                                <td className="bg-gray-50 px-3 py-2 font-medium">
-                                    Audio
-                                </td>
-                                <td className="px-3 py-2">
-                                    Audio by Dirac, Built-in speaker & microphone
-                                </td>
-                            </tr>
+                                <tr className="border-t">
+                                    <td className="bg-gray-50 px-3 py-2 font-medium">
+                                        Audio
+                                    </td>
+                                    <td className="px-3 py-2">
+                                        Audio by Dirac, Built-in speaker & microphone
+                                    </td>
+                                </tr>
 
-                            <tr className="border-t">
-                                <td className="bg-gray-50 px-3 py-2 font-medium">
-                                    Bàn phím
-                                </td>
-                                <td className="px-3 py-2">
-                                    Bàn phím Chiclet, hành trình 1.35mm
-                                </td>
-                            </tr>
+                                <tr className="border-t">
+                                    <td className="bg-gray-50 px-3 py-2 font-medium">
+                                        Bàn phím
+                                    </td>
+                                    <td className="px-3 py-2">
+                                        Bàn phím Chiclet, hành trình 1.35mm
+                                    </td>
+                                </tr>
 
-                            <tr className="border-t">
-                                <td className="bg-gray-50 px-3 py-2 font-medium">
-                                    Tiêu chuẩn
-                                </td>
-                                <td className="px-3 py-2">
-                                    MIL-STD 810H
-                                </td>
-                            </tr>
+                                <tr className="border-t">
+                                    <td className="bg-gray-50 px-3 py-2 font-medium">
+                                        Tiêu chuẩn
+                                    </td>
+                                    <td className="px-3 py-2">
+                                        MIL-STD 810H
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <BackToTop/>
+            <BackToTop />
         </div>
 
     );

@@ -1,15 +1,4 @@
-.cart-mini::before{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 30px;
-    background-color: transparent;
-    position: absolute;
-    top: -30px;
-    right: 0
-}
-
-.cart-mini::after {
+.user-menu::before {
     content: "";
     position: absolute;
     top: -8px;
@@ -20,4 +9,14 @@
     transform: rotate(45deg);
     border-left: 1px solid #f3f4f6; /* gray-100 */
     border-top: 1px solid #f3f4f6; /* gray-100 */
+}
+
+.user-menu::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 14px;
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
 }

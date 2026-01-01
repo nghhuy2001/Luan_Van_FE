@@ -1,9 +1,9 @@
-import Header from "../components/Header/Header";
+
 import Banner from "../components/Banner/Banner";
 import CategoryQuickSelect from "../components/Category/CategoryQuickSelect";
 import BrandSection from "../components/Brand/BrandSection";
 import { msiProducts } from "../apis/product"
-import BackToTop from "../components/BackToTop";
+import BackToTop from "../components/Scroll/BackToTop";
 
 const Home = () => {
     return (
@@ -12,7 +12,7 @@ const Home = () => {
             <div className="content-body max-w-7xl mx-auto px-4">
                 <CategoryQuickSelect />
                 <BrandSection
-                    brand="LAPTOP DELL"
+                    brand="dell"
                     tabs={[
                         "DELL XPS",
                         "DELL PRO",
@@ -26,7 +26,7 @@ const Home = () => {
                 />
 
                 <BrandSection
-                    brand="LAPTOP THINKPAD"
+                    brand="thinkpad"
                     tabs={[
                         "THINKPAD X",
                         "THINKPAD T",
