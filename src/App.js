@@ -18,11 +18,16 @@ import Search from "./pages/Search";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ProductList from "./pages/admin/Products/ProductList";
-import CategoryList from "./pages/admin/Products/CategoryList";
-import SalesList from "./pages/admin/Sales/SalesList";
-import CustomerList from "./pages/admin/Users/CustomerList";
-import AdminList from "./pages/admin/Users/AdminList";
 import Analytics from "./pages/admin/Analytics/Analytics";
+import Dashboard from "./pages/admin/Dashboard";
+import ImportProducts from "./pages/admin/Import/ImportProducts";
+import ImportList from "./pages/admin/Import/ImportList";
+import ImportViewModalPage from "./pages/admin/Import/ImportViewModalPage";
+import ProductEdit from "./pages/admin/Products/ProductEdit";
+import CategoryList from "./pages/admin/Categories/CategoryList";
+import SalesOrderList from "./pages/admin/Sales/SalesOrderList";
+import {AdminListPage, CustomerListPage} from "./pages/admin/Users/UserListPage";
+import SupplierListPage from "./pages/admin/Suppliers/SupplierListPage";
 
 function App() {
   return (
@@ -76,12 +81,18 @@ function App() {
 
         {/*    ADMIN  */}
         <Route path="/admin" element={<AdminLayout />}>
+          <Route index  element={<Dashboard />} />
           <Route path="products" element={<ProductList />} />
-                <Route path="categories" element={<CategoryList />} />
-                <Route path="sales" element={<SalesList />} />
-                <Route path="users/customers" element={<CustomerList />} />
-                <Route path="users/admins" element={<AdminList />} />
-                <Route path="analytics" element={<Analytics />} />
+          <Route path="products/:id/edit" element={<ProductEdit />} />
+          <Route path="import/list" element={<ImportList />} />
+          <Route path="import/create" element={<ImportProducts />} />
+          <Route path="import/:importCode" element={<ImportViewModalPage />} />
+          <Route path="categories" element={<CategoryList />} />
+          <Route path="sales" element={<SalesOrderList />} />
+          <Route path="users/customers" element={<CustomerListPage />} />
+          <Route path="users/admins" element={<AdminListPage />} />
+          <Route path="analytics" element={<Analytics />} />
+          <Route path="suppliers" element={<SupplierListPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
